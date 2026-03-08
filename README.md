@@ -1,38 +1,50 @@
-# Retail Sales Data Analysis
+# Análisis de Ventas Retail con Python
 
-This project analyzes retail sales data to identify patterns in store performance, department sales, and external factors affecting retail performance.
+Este proyecto analiza datos de ventas en el sector retail para identificar patrones en el desempeño de las tiendas, departamentos y factores externos que pueden influir en las ventas.
 
-The analysis was developed using Python and statistical techniques such as descriptive statistics, ANOVA, t-tests, correlation analysis, and linear regression.
+El análisis fue realizado utilizando Python y diferentes técnicas estadísticas como estadísticas descriptivas, ANOVA, pruebas t, análisis de correlación y regresión lineal.
 
 ## Dataset
 
-The dataset contains weekly retail sales data with 208 observations and 13 variables.
+El conjunto de datos contiene información de ventas semanales de varias tiendas.
 
-Main variables include:
+Características principales del dataset:
 
-- Store
-- Week
-- Temperature
-- Fuel Price
-- CPI (Consumer Price Index)
-- Unemployment
-- Holiday indicator
-- Department sales (Automotive, Home, Women Clothing, Men Clothing, Electronics)
-- Total Sales
+- 208 observaciones
+- 13 variables
 
-## Methods Used
+Variables principales:
 
-The analysis includes:
+- Store (tienda)
+- Week (semana)
+- Total_Sales (ventas totales)
+- Temperature (temperatura)
+- CPI (índice de precios al consumidor)
+- Unemployment (desempleo)
+- IsHoliday (semana festiva)
 
-- Descriptive statistics
-- ANOVA tests for differences between stores and departments
-- T-test for holiday vs non-holiday sales
-- Correlation analysis
-- Linear regression model
+También se incluyen variables de ventas por departamento:
 
-## Technologies Used
+- Automotive
+- Home
+- Women Clothing
+- Men Clothing
+- Electronics
 
-Python libraries used:
+## Métodos utilizados
+
+Durante el análisis se aplicaron las siguientes técnicas:
+
+- Estadísticas descriptivas
+- ANOVA para comparar ventas entre tiendas
+- ANOVA para comparar ventas entre departamentos
+- Prueba t para comparar semanas festivas vs no festivas
+- Análisis de correlación
+- Modelo de regresión lineal
+
+## Tecnologías utilizadas
+
+El análisis fue desarrollado en Python utilizando las siguientes librerías:
 
 - pandas
 - numpy
@@ -41,15 +53,31 @@ Python libraries used:
 - matplotlib
 - seaborn
 
-## Results Summary
+## Visualizaciones
 
-Key findings include:
+### Promedio de ventas por tienda
 
-- Holiday weeks significantly increase sales
-- Dubai and New York show the highest sales performance
-- Automotive and Electronics departments generate the highest average sales
-- External variables such as temperature, CPI and unemployment show limited explanatory power for sales behavior
+![Ventas por tienda](plots/ventas_por_tienda.png)
 
-## Author
+### Promedio de ventas por departamento
 
-Enrique Tinoco
+![Ventas por departamento](plots/ventas_por_departamento.png)
+
+### Ventas en semanas festivas vs no festivas
+
+![Ventas festivas](plots/ventas_festivas_vs_no_festivas.png)
+
+## Resultados principales
+
+Algunos de los hallazgos más importantes del análisis son:
+
+- Las semanas festivas generan un incremento significativo en las ventas
+- Las tiendas Dubai y New York presentan los mayores promedios de ventas
+- El departamento Automotive genera el mayor promedio de ventas
+- Los factores externos analizados explican solo una parte limitada del comportamiento de las ventas
+
+## Autor
+
+Enrique Tinoco  
+Proyecto académico — Liderazgo para la Toma de Decisiones Basada en Datos  
+Universidad Autónoma de Guadalajara
