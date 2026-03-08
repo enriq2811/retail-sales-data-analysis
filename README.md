@@ -76,8 +76,3 @@ Algunos de los hallazgos más importantes del análisis son:
 - El departamento Automotive genera el mayor promedio de ventas
 - Los factores externos analizados explican solo una parte limitada del comportamiento de las ventas
 
-## Autor
-
-Enrique Tinoco  
-Proyecto académico — Liderazgo para la Toma de Decisiones Basada en Datos  
-Universidad Autónoma de Guadalajara
