@@ -10,6 +10,10 @@ plt.rcParams["figure.figsize"] = (10, 6)
 # Carpeta donde está el script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
+# crear carpeta de gráficos
+plots_dir = os.path.join(script_dir, "plots")
+os.makedirs(plots_dir, exist_ok=True)
+
 # Ruta del archivo CSV
 file_path = os.path.join(script_dir, "Ventas_Tienda.csv")
 
@@ -194,6 +198,7 @@ plt.title("Promedio de Ventas por Tienda")
 plt.xlabel("Tienda")
 plt.ylabel("Ventas Promedio")
 plt.tight_layout()
+plt.savefig(os.path.join(plots_dir, "ventas_por_tienda.png"), dpi=300, bbox_inches="tight")
 plt.show()
 
 # Gráfico 2: Ventas promedio por departamento
@@ -208,12 +213,12 @@ plt.xlabel("Departamento")
 plt.ylabel("Ventas Promedio")
 plt.xticks(rotation=20)
 plt.tight_layout()
+plt.savefig(os.path.join(plots_dir, "ventas_por_departamento.png"), dpi=300, bbox_inches="tight")
 plt.show()
 
 # Gráfico 3: Ventas promedio en semanas festivas vs no festivas
 ventas_por_festivo = df.groupby("IsHoliday")["Total_Sales"].mean()
 
-# Renombrar etiquetas para que se vean mejor
 labels = ["No festiva", "Festiva"]
 
 plt.figure(figsize=(8, 6))
@@ -222,4 +227,5 @@ plt.title("Ventas Promedio: Semanas Festivas vs No Festivas")
 plt.xlabel("Tipo de semana")
 plt.ylabel("Ventas Promedio")
 plt.tight_layout()
+plt.savefig(os.path.join(plots_dir, "ventas_festivas_vs_no_festivas.png"), dpi=300, bbox_inches="tight")
 plt.show()
